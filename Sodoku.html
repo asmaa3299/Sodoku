@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sodoku</title>
+
+  <link rel="stylesheet" type="text/css" href="aos/aos.css">
+	<link rel="stylesheet" type="text/css" href="css/SodokuGame.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap/bootstrap.css">
+  
+
+</head>
+<body class="container">
+  <br><br><br>
+  <center><h1 data-aos="fade-right" data-aos-duration="1000">Sodoku</h1></center>
+  <br>
+  <div class="container">
+  	<center>
+  		<table class="Table" data-aos="zoom-in" data-aos-duration="2000">
+
+  			<colgroup><col><col><col></colgroup>
+  			<colgroup><col><col><col></colgroup>
+  			<colgroup><col><col><col></colgroup>
+  		<!--First Three Rows--->
+  		<tbody>
+  			<!--Row 1-->
+   			<tr> 
+   				<td><input type="number" id="row1-1" value="2" readonly class="exist"></td> 
+   				<td><input type="number" id="row1-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row1-3" value="8" readonly class="exist"></td> 
+   				<td><input type="number" id="row1-4" value="3" readonly class="exist"></td> 
+   				<td><input type="number" id="row1-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row1-6" value="5" readonly class="exist"></td> 
+   				<td><input type="number" id="row1-7" value="7" readonly class="exist"></td> 
+   				<td><input type="number" id="row1-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row1-9" value="6" readonly class="exist"></td> 
+   			</tr>
+   			<!-- Row 2-->
+   			<tr> 
+   				<td><input type="number" id="row2-1" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row2-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row2-3" value="1" readonly class="exist"></td> 
+   				<td><input type="number" id="row2-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row2-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   				<td><input type="number" id="row2-6" value="8" readonly class="exist"></td> 
+   				<td><input type="number" id="row2-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row2-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row2-9" value="9" readonly class="exist"></td>
+   			</tr>
+   			<!--Row 3-->
+   			<tr>
+   				<td><input type="number" id="row3-1" value="9" readonly class="exist"></td> 
+   				<td><input type="number" id="row3-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-6" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row3-9" value="2" readonly class="exist"></td> 
+   			</tr>
+   	    <!--Second Three Rows-->
+  		<tbody>
+  			<!--Row 4-->
+   			<tr> 
+   				<td><input type="number" id="row4-1" value="6" readonly class="exist"></td> 
+   				<td><input type="number" id="row4-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row4-3" value="2" readonly class="exist"></td> 
+   				<td><input type="number" id="row4-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row4-5" value="3" readonly class="exist"></td> 
+   				<td><input type="number" id="row4-6" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row4-7" value="1" readonly class="exist"></td> 
+   				<td><input type="number" id="row4-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row4-9" value="4" readonly class="exist"></td> 
+   			</tr>
+   			<!-- Row 5-->
+   			<tr> 
+   				<td><input type="number" id="row5-1" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-6" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row5-9" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td> 
+   			</tr>
+   			<!-- Row 6 -->
+   			<tr>
+   				<td><input type="number" id="row6-1" value="7" readonly class="exist"></td> 
+   				<td><input type="number" id="row6-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row6-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row6-4" value="8" readonly class="exist"></td> 
+   				<td><input type="number" id="row6-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row6-6" value="2" readonly class="exist"></td> 
+   				<td><input type="number" id="row6-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row6-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row6-9" value="3" readonly class="exist"></td> 
+   			</tr>
+   		<!-- Third & Final Three Rows-->
+  		<tbody>
+  			<!--Row 7-->
+   			<tr> 
+   				<td><input type="number" id="row7-1" value="8" readonly class="exist"></td> 
+   				<td><input type="number" id="row7-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-5" value="1" readonly class="exist"></td> 
+   				<td><input type="number" id="row7-6" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row7-9" value="5" readonly class="exist"></td> 
+   			</tr>
+   			<!--Row 8-->
+   			<tr> 
+   				<td><input type="number" id="row8-1" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-4" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-5" value="8" readonly class="exist"></td> 
+   				<td><input type="number" id="row8-6" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row8-9" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>
+   			</tr>
+   			<!--Row 9-->
+   			<tr> 
+   				<td><input type="number" id="row9-1" value="4" readonly class="exist"></td> 
+   				<td><input type="number" id="row9-2" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row9-3" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row9-4" value="9" readonly class="exist"></td> 
+   				<td><input type="number" id="row9-5" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row9-6" value="3" readonly class="exist"></td> 
+   				<td><input type="number" id="row9-7" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row9-8" min="1" max="9" onkeyup="if(this.value > 9 || this.value < 1) this.value = null;"></td>  
+   				<td><input type="number" id="row9-9" value="1" readonly class="exist"></td> 
+   			</tr>
+	</table>
+
+</center>
+	<br>
+	<center>
+		<button onclick="newgame();" data-aos="fade-right" data-aos-duration="3000">New Game</button>
+    <button data-aos="fade-right" data-aos-duration="3000"><a href="Start_Game.html">Back</a></button>
+    <div class = "winner-area" id="winner-area">Winner Winner<img class="winner-img" src="img/party.png"></div>
+	</center>
+  </div>
+
+  <script type="text/javascript" src="aos/aos.js"></script>
+  <script type="text/javascript" src="js/SodokuGame.js"></script>
+  <script>
+    AOS.init(
+        );
+  </script>
+
+</body>
+
+</html>

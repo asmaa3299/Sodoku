@@ -1,0 +1,86 @@
+.container{
+	background-color: #D5F2FF;
+}
+table {
+	border-collapse: collapse;
+
+	
+}
+colgroup,tbody {
+	border: solid medium;
+
+}
+td{
+ 	border: solid thin;
+ 	height: 1.4em;
+ 	width: 1.4em;
+ 	text-align: center; 
+ 	padding: 0;
+
+ 	
+}
+
+input{
+	height: 1.4em;
+ 	width: 1.4em;
+ 	border: solid thin white;
+ 	text-align: center; 
+ 	border-radius: 50px;
+}
+button , button a{
+	padding: 8px;
+	background-color: #E8718D;
+	border: solid thin #E8718D;
+	color: white;
+	border-radius: 50px;
+}
+
+button:hover , button a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+.font-awesome{
+	font-size:60px;
+	color: #E8718D;
+	margin-top: 30px;
+	transition: all 0.6s ease-in-out;
+	
+}
+img{
+	width: 250px;
+	height: 250px;
+}
+p{
+	color: #E8718D;
+	font-size:25px;
+}
+h1{
+	color: #00263C;
+}
+a:hover , .font-awesome:hover{
+	text-decoration: none;
+	color: #E8718D;
+	transform: scale(1.1,1.1);
+	transition: all 0.6s ease-in-out;
+}
+.exist{
+	background-color: #D5F2FF;
+	border-color: white;
+}
+.winner-area{
+	color: #E8718D;
+	margin-top: 20px;
+	display: none;
+
+}
+.winner-img{
+	width: 40px;
+	height: 40px;
+}
